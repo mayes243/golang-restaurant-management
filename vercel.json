@@ -6,10 +6,5 @@
       "use": "@vercel/go"
     }
   ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/main.go"
-    }
-  ]
+  "routes": [{ "handle": "filesystem" }, { "src": "/.*", "dest": "/main.go" }]
 }
