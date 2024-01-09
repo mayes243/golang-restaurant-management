@@ -41,7 +41,7 @@ func main() {
 	routes.UserRoutes(apiGroup)
 	apiGroup.Use(middleware.Authentication())
 
-	// routes.FoodRoutes(apiGroup)
+	routes.FoodRoutes(apiGroup)
 	routes.MenuRoutes(apiGroup)
 	routes.TableRoutes(apiGroup)
 	routes.OrderRoutes(apiGroup)
