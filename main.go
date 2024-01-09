@@ -1,6 +1,7 @@
 package main
 
 import (
+	"net/http"
 	"os"
 	"strings"
 
@@ -31,6 +32,10 @@ func main() {
 
 	trustedProxies := strings.Split(os.Getenv("TRUSTED_PROXIES"), ",")
 	router.SetTrustedProxies(trustedProxies)
+
+	router.GET("/", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{"message": "Hello, Vercel with Gin!"})
+	})
 
 	// prefix for all routes
 	apiGroup := router.Group("/api")
