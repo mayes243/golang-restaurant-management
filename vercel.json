@@ -1,4 +1,4 @@
 {
   "trailingSlash": false,
-  "rewrites": [{ "source": "/(.*)", "destination": "main.go" }]
+  "rewrites": [{ "src": "/(.*)", "dest": "main.go" }]
 }
